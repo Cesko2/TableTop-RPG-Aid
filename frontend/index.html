@@ -6,3 +6,45 @@
   formatting for the webpage, creating prompt boxes and so on, which will then be styilized by the associated css file, and tied to the associated js file for actually
   computing any of the data it takes in.
  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableTop RPG Aid - Sign In</title>
+    <link rel="stylesheet" href="css/sign_on.css">
+</head>
+<body>
+    <main class="login-container">
+        <h1>TableTop RPG Aid</h1>
+        <p class="subtitle">Your adventure begins here</p>
+
+        <div class="login-card">
+            <h2>Welcome, Adventurer</h2>
+
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username"
+                       name="username"
+                       placeholder="Enter your username"
+                       autocomplete="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       autocomplete="current-password" required>
+
+                <button type="submit">Enter the Realm</button>
+            </form>
+
+            <p class="signup-text">
+                New adventurer? Create an account
+            </p>
+        </div>
+    </main>
+</body>
+</html>
+
