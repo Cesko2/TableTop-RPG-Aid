@@ -3,3 +3,61 @@
   The purpose of this file is to provide the formatting and user input sections of the dashboard page of our webapp.
   It will delegate all processing of data to it's associated java script file, and all it's stylization to it's associated css file.
  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TableTop RPG Aid</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>TableTop RPG Aid</h1>
+        <a href="index.html">Sign Out</a>
+    </header>
+
+    <div class="page-layout">
+        <nav class="sidebar" aria-label="Main navigation">
+            <h2>Menu</h2>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#characters">Characters</a>
+            <a href="#inventory">Inventory</a>
+            <a href="#notes">Shared Notes</a>
+        </nav>
+
+        <main class="dashboard-content">
+            <h2>Welcome, Adventurer!</h2>
+            <p>Manage your characters and adventures.</p>
+
+            <section id="characters">
+                <h3>Your Characters</h3>
+
+                <div class="character-card">
+                    <h4>Elara Moonwhisper</h4>
+                    <p>Level 5 - Elf Wizard</p>
+                </div>
+
+                <div class="character-card">
+                    <h4>Thorin Ironforge</h4>
+                    <p>Level 3 - Dwarf Fighter</p>
+                </div>
+
+                <button type="button">+ Create Character</button>
+            </section>
+
+            <section id="inventory">
+                <h3>Inventory</h3>
+                <p>Your character items will appear here.</p>
+            </section>
+
+            <section id="notes">
+                <h3>Shared Notes</h3>
+                <p>Your shared campaign notes will appear here.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -3,3 +3,146 @@
  * this is the stylization file for the dashboard page of our webapp. It will provide all formatting,
  * coloring and padding to the webpage, giving a comfy aesthetic for our users to gaze upon.
  */
+
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #30271f;
+    color: #503820;
+}
+
+header {
+    background-color: #49382a;
+    color: #f2e6ca;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header a {
+    color: #f2e6ca;
+    text-decoration: none;
+}
+
+.page-layout {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #49382a;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar h2 {
+    color: #f2e6ca;
+    margin-top: 0;
+}
+
+.sidebar a {
+    color: #ead5aa;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #65462d;
+}
+
+.dashboard-content {
+    flex: 1;
+    background-color: #e8d5ac;
+    background-image:
+    radial-gradient(ellipse at 20% 15%,
+        rgba(190, 169, 154, 0.75),
+        transparent 65%),
+    radial-gradient(ellipse at 85% 80%,
+        rgba(125, 78, 32, 0.20),
+        transparent 65%),
+    repeating-linear-gradient(
+        35deg,
+        rgba(110, 75, 35, 0.025) 0px,
+        rgba(110, 75, 35, 0.025) 1px,
+        transparent 1px,
+        transparent 5px
+    );
+    margin: 25px;
+    padding: 35px;
+    border: 5px double #947347;
+    border-radius: 8px;
+    box-shadow:
+    inset 0 0 45px rgba(93, 55, 20, 0.25),
+    0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-content h2 {
+    font-size: 28px;
+}
+
+.dashboard-content h3 {
+    border-bottom: 1px solid #c9b68e;
+    padding-bottom: 10px;
+}
+
+.character-card {
+    background-color: #fff9ea;
+    border: 1px solid #b6a17c;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.character-card h4 {
+    margin: 0 0 10px;
+}
+
+.character-card p {
+    margin: 0;
+    color: #765b3b;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #65462d;
+    color: #fff3d7;
+    border: none;
+    border-radius: 5px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #805b38;
+}
+
+section {
+    margin-top: 35px;
+}
+
+@media (max-width: 700px) {
+    .page-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+    }
+
+    .dashboard-content {
+        margin: 15px;
+        padding: 20px;
+    }
+}
