@@ -5,144 +5,328 @@
  */
 
 
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     margin: 0;
-    font-family: Georgia, serif;
-    background-color: #30271f;
-    color: #503820;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #211c19;
+    color: #e8dccb;
 }
 
 header {
-    background-color: #49382a;
-    color: #f2e6ca;
-    padding: 20px 30px;
+    background: #302923;
+    padding: 22px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #66533d;
+    box-shadow: none;
 }
 
 header h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 27px;
+    color: #e8dccb;
 }
 
 header a {
-    color: #f2e6ca;
+    color: #c5b39c;
     text-decoration: none;
 }
+
+header a:hover {
+    color: #e8dccb;
+}
+
+/* Page layout */
 
 .page-layout {
     display: flex;
     min-height: calc(100vh - 80px);
 }
 
+/* Sidebar */
+
+
 .sidebar {
-    width: 200px;
-    background-color: #49382a;
-    padding: 25px 20px;
+    width: 230px;
+    flex-shrink: 0;
+    background: #302923;
+    padding: 35px 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+    border-right: 1px solid #66533d;
 }
 
 .sidebar h2 {
-    color: #f2e6ca;
-    margin-top: 0;
+    color: #e8dccb;
+    font-size: 20px;
+    margin: 0 0 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #66533d;
 }
 
 .sidebar a {
-    color: #ead5aa;
+    display: block;
+    color: #c5b39c;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 13px 16px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: background 0.2s;
 }
 
 .sidebar a:hover {
-    background-color: #65462d;
+    background: #40362d;
+    color: #e8dccb;
 }
+
+/* Main dashboard */
+
 
 .dashboard-content {
     flex: 1;
-    background-color: #e8d5ac;
-    background-image:
-    radial-gradient(ellipse at 20% 15%,
-        rgba(190, 169, 154, 0.75),
-        transparent 65%),
-    radial-gradient(ellipse at 85% 80%,
-        rgba(125, 78, 32, 0.20),
-        transparent 65%),
-    repeating-linear-gradient(
-        35deg,
-        rgba(110, 75, 35, 0.025) 0px,
-        rgba(110, 75, 35, 0.025) 1px,
-        transparent 1px,
-        transparent 5px
-    );
-    margin: 25px;
-    padding: 35px;
-    border: 5px double #947347;
+    min-width: 0;
+    margin: 30px;
+    padding: 40px;
+
+    background: #302923;
+
+    border: 1px solid #66533d;
     border-radius: 8px;
-    box-shadow:
-    inset 0 0 45px rgba(93, 55, 20, 0.25),
-    0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+
+    color: #e8dccb;
 }
 
 .dashboard-content h2 {
-    font-size: 28px;
+    color: #e8dccb;
+    font-size: 30px;
+    margin: 0 0 12px;
 }
 
 .dashboard-content h3 {
-    border-bottom: 1px solid #c9b68e;
-    padding-bottom: 10px;
+    color: #cbb18d;
+    font-size: 21px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #66533d;
 }
 
+/* Character cards */
+
+
 .character-card {
-    background-color: #fff9ea;
-    border: 1px solid #b6a17c;
+    background: #40362d;
+    border: 1px solid #66533d;
     border-radius: 6px;
-    padding: 15px 20px;
-    margin-bottom: 15px;
+
+    padding: 22px 25px;
+    margin-bottom: 16px;
+
+    box-shadow: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.character-card:hover {
+    background: #4a3e33;
+    border-color: #a88b63;
 }
 
 .character-card h4 {
     margin: 0 0 10px;
+    color: #e8dccb;
+    font-size: 19px;
 }
 
 .character-card p {
     margin: 0;
-    color: #765b3b;
+    color: #c5b39c;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
+/* Buttons */
+
+
 button {
-    padding: 12px 20px;
-    background-color: #65462d;
-    color: #fff3d7;
-    border: none;
+    padding: 12px 22px;
+    background: #a88b63;
+    color: #211c19;
+    border: 1px solid #a88b63;
     border-radius: 5px;
+
     font-family: Georgia, serif;
     font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
+
+    box-shadow: none;
+    transition: background 0.2s;
 }
 
 button:hover {
-    background-color: #805b38;
+    background: #c0a47d;
 }
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #cba56c;
+    outline-offset: 3px;
+}
+
+/* Sections */
 
 section {
     margin-top: 35px;
 }
 
+/* Mobile styling */
+
 @media (max-width: 700px) {
+    header {
+        padding: 18px 20px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
     .page-layout {
         flex-direction: column;
     }
 
     .sidebar {
-        width: auto;
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #765a3d;
     }
 
     .dashboard-content {
         margin: 15px;
+        padding: 25px 20px;
+    }
+
+    .dashboard-content h2 {
+        font-size: 25px;
+    }
+
+    .character-card {
         padding: 20px;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button,
+    .character-card,
+    .sidebar a {
+        transition: none;
+    }
+}
+
+
+.dashboard-content {
+    position: relative;
+
+    border: 3px double #a88b63;
+    border-radius: 4px;
+
+    box-shadow:
+        inset 0 0 0 6px #302923,
+        inset 0 0 0 7px #69543c,
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-content::before {
+    top: -16px;
+    left: 28px;
+}
+
+.dashboard-content::after {
+    bottom: -16px;
+    right: 28px;
+}
+
+
+body {
+    background: #1d140f;
+    color: #f2e6ca;
+}
+
+header {
+    background: #291c15;
+    border-bottom-color: #8c6841;
+}
+
+.sidebar {
+    background: #291c15;
+    border-right-color: #715134;
+}
+
+.sidebar h2 {
+    color: #e4c394;
+}
+
+.sidebar a {
+    color: #dfc9aa;
+}
+
+.sidebar a:hover {
+    background: #403025;
+}
+
+.dashboard-content {
+    background: #2b1d16;
+    border-color: #b48c58;
+    color: #f2e6ca;
+}
+
+.dashboard-content h2 {
+    color: #f2e6ca;
+}
+
+.dashboard-content h3 {
+    color: #d9b780;
+    border-bottom-color: #715134;
+}
+
+.character-card {
+    background: #403025;
+    border-color: #84633e;
+}
+
+.character-card:hover {
+    background: #4b3829;
+    border-color: #b48c58;
+}
+
+.character-card h4 {
+    color: #f2e6ca;
+}
+
+.character-card p {
+    color: #dac5a7;
+}
+
+button {
+    background: #433326;
+    color: #fff0d4;
+    border-color: #8b7962;
+}
+
+button:hover {
+    background: #6e5c48;
+}
+
+.dashboard-content::before,
+.dashboard-content::after {
+    background: #2b1d16;
+    color: #d9b780;
 }

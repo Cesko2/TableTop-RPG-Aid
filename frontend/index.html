@@ -19,37 +19,78 @@
 </head>
 
 <body>
+    <div class="fantasy-background" aria-hidden="true">
+        <div class="scene-layer">
+            <div class="background-image"></div>
+            <div class="portal-shimmer"></div>
+            <div class="firelight fire-one"></div>
+            <div class="firelight fire-two"></div>
+            <div class="firelight fire-three"></div>
+            <div class="firelight fire-four"></div>
+        </div>
+        <div class="portal-light"></div>
+
+        <div class="embers">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
     <main class="login-container">
+
+        <div class="ornament" aria-hidden="true">✦</div>
+        <p class="eyebrow">WELCOME TO</p>
+
         <h1>TableTop RPG Aid</h1>
         <p class="subtitle">Your adventure begins here</p>
 
+        <div class="decorative-rule" aria-hidden="true">
+            <span>◆</span>
+        </div>
+
         <div class="login-card">
-            <h2>Welcome, Adventurer</h2>
+            <h2>Enter the Realm</h2>
+            <p class="login-description">
+                Sign in to continue your adventure.
+            </p>
 
             <form id="sign_on_form">
                 <label for="username">Username</label>
-                <input type="text" id="username"
-                       name="username"
-                       placeholder="Enter your username"
-                       autocomplete="username" required>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    autocomplete="username"
+                    required
+                >
 
                 <label for="password">Password</label>
-                <input type="password" id="password"
-                       name="password"
-                       placeholder="Enter your password"
-                       autocomplete="current-password" required>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
 
-                <button type="submit">Enter the Realm</button>
+                <button type="submit">
+                    Enter the Realm <span aria-hidden="true">→</span>
+                </button>
             </form>
 
             <script src="js/sign_on.js"></script>
 
             <p class="signup-text">
-                New adventurer? Create an account
+                New adventurer? Account creation coming soon.
             </p>
         </div>
     </main>
+
+    <script src="js/sign_on.js"></script>
 </body>
 
 </html>
-
