@@ -242,30 +242,36 @@ body {
 .embers span:nth-child(12) { left: 55%; animation-delay: -4s; animation-duration: 14s; }
 
 /* Parchment login box */
+
+
 .login-container {
     position: relative;
-    z-index: 1;
-    width: min(100%, 430px);
-    padding: 34px clamp(24px, 4vw, 42px) 28px;
-    border: 1px solid rgba(214, 177, 111, 0.9);
-    outline: 5px solid rgba(30, 18, 12, 0.26);
-    border-radius: 12px;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 248, 225, 0.96),
-        rgba(231, 209, 169, 0.96)
-    );
-    box-shadow:
-        0 24px 65px rgba(0, 0, 0, 0.55),
-        inset 0 0 0 5px rgba(128, 86, 41, 0.1),
-        inset 0 0 35px rgba(169, 124, 55, 0.1);
+    z-index: 10;
+
+    width: 500px;
+    max-width: 100%;
+
+    padding: 65px 55px 70px;
+
+    background-image: url("../images/parchment-panel.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
+    border: none;
+    border-radius: 0;
+
     text-align: center;
+
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5));
+
     animation: card-arrive 0.9s ease-out both;
 }
 
 .ornament {
     font-size: 29px;
-    color: #997043;
+    color: #553e26;
     margin-bottom: 6px;
 }
 
@@ -273,7 +279,7 @@ body {
     margin: 0 0 10px;
     font: 700 10px Arial, sans-serif;
     letter-spacing: 0.29em;
-    color: #927149;
+    color: #21201e;
 }
 
 h1 {
@@ -287,7 +293,7 @@ h1 {
     margin: 11px 0 22px;
     font-size: 15px;
     font-style: italic;
-    color: #846446;
+    color: #000000;
 }
 
 .decorative-rule {
@@ -295,7 +301,7 @@ h1 {
     align-items: center;
     gap: 12px;
     margin-bottom: 18px;
-    color: #a77b48;
+    color: #181717;
     font-size: 12px;
 }
 
@@ -319,7 +325,7 @@ h2 {
 
 .login-description {
     margin: 0 0 24px;
-    color: #816749;
+    color: #0e0e0e;
     font-size: 13px;
 }
 
@@ -332,28 +338,44 @@ form {
 }
 
 label {
-    font: 700 12px Arial, sans-serif;
-    color: #5b402b;
-    letter-spacing: 0.045em;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #3b2416;
+    letter-spacing: 0.5px;
+
+    margin-left: 7.5%;
+    text-align: left;
 }
 
+
 input {
-    width: 100%;
-    padding: 13px 14px;
-    margin-bottom: 7px;
-    border: 1px solid #b9a17e;
-    border-radius: 5px;
-    background: rgba(255, 253, 244, 0.9);
-    color: #3b2c20;
-    font: 15px Georgia, serif;
+    width: 85%;
+    padding: 10px 12px;
+    margin: 0 auto 10px;
+
+    background-color: #d2b48c;
+    border: 1px solid #8b6844;
+    border-radius: 4px;
+
+    color: #3b281b;
+    font-family: Georgia, serif;
+    font-size: 14px;
+
     transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #80664e;
 }
 
 input:focus {
     outline: none;
-    border-color: #966b3d;
-    box-shadow: 0 0 0 3px rgba(169, 125, 63, 0.24);
+    border-color: #a67c45;
+    box-shadow: 0 0 5px rgba(180, 130, 60, 0.45);
 }
+
 
 /* Login button */
 button {
@@ -449,10 +471,6 @@ button:focus-visible {
     .portal-light {
         right: -20%;
         width: 80vw;
-    }
-
-    .login-container {
-        padding: 28px 26px 25px;
     }
 }
 
