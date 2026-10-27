@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheet Editor</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sheet_creator.css">
+  </head>
+
+  <body>
+    <header>
+      Sheet Editor
+      <a href="index.html">Sign Out</a>
+    </header>
+
+    <button type="button" class="save" id="save">Save Sheet</button>
+
+    <div class="dashboard-content">
+      <form class="sheet_header" id="required">
+        <div>
+          <label for="name">Character Name:</label>
+          <input type="text" name="name" id="name" style="background: #d4b18e; border: 2px inset #302923; font-size: 16px;" required>
+        </div>
+        <div>
+          <label for="sheet_type">Select game system:</label>
+          <select id="sheet_type" style="background: #d4b18e; border: 2px inset #302923;">
+           <option value="Null" selected></option>
+           <option value="DnD">DnD</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <form id="DnD_sheet" class="sheet">
+      <div class="dashboard-content d1">
+        <div class="stat_box">
+         <div>
+            <input type="text" name="STR">
+            <label for="STR">STR</label>
+         </div>
+         <div>
+            <input type="text" name="DEX">
+            <label for="DEX">DEX</label>
+         </div>
+         <div>
+            <input type="text" name="CON">
+            <label for="CON">CON</label>
+         </div>
+         <div>
+            <input type="text" name="INT">
+            <label for="INT">INT</label>
+         </div>
+         <div>
+            <input type="text" name="WIS">
+            <label for="WIS">WIS</label>
+         </div>
+         <div>
+            <input type="text" name="CHA">
+            <label for="CHA">CHA</label>
+         </div>
+         <div class="stat_box non_core">
+            <input type="text" name="base_hp">
+            <label for="base_hp">Base HP</label>
+         </div>
+         <div class="stat_box non_core">
+            <input type="text" name="real_hp" disabled>
+            <label for="real_hp">Total HP</label>
+         </div>
+         <div class="stat_box non_core">
+            <input type="text" name="AC" disabled>
+            <label for="AC">AC</label>
+         </div>
+         <div class="stat_box non_core">
+            <input type="text" name="INI" disabled>
+            <label for="INI">Initiative</label>
+         </div>
+        </div>
+      </div>
+
+      <div class="dashboard-content d2">
+        Skills:
+        <div id="skills_list" class="skills_list">
+          <div>
+            <button name="Acrobatics" class="skill" data-stage="0"></button>
+            <label for="Acrobatics">Acrobatics</label>
+          </div>
+          <div>
+            <button name="Animal Handling" class="skill" data-stage="0"></button>
+            <label for="Animal Handling">Animal Handling</label>
+          </div>
+          <div>
+            <button name="Arcana" class="skill" data-stage="0"></button>
+            <label for="Arcana">Arcana</label>
+          </div>
+          <div>
+            <button name="Atheltics" class="skill" data-stage="0"></button>
+            <label for="Athletics">Athletics</label>
+          </div>
+          <div>
+            <button name="Deception" class="skill" data-stage="0"></button>
+            <label for="Deception">Deception</label>
+          </div>
+          <div>
+            <button name="History" class="skill" data-stage="0"></button>
+            <label for="History">History</label>
+          </div>
+          <div>
+            <button name="Insight" class="skill" data-stage="0"></button>
+            <label for="Insight">Insight</label>
+          </div>
+          <div>
+            <button name="Intimidation" class="skill" data-stage="0"></button>
+            <label for="Intimidation">Intimidation</label>
+          </div>
+          <div>
+            <button name="Investigation" class="skill" data-stage="0"></button>
+            <label for="Investigation">Investigation</label>
+          </div>
+          <div>
+            <button name="Medicine" class="skill" data-stage="0"></button>
+            <label for="Medicine">Medicine</label>
+          </div>
+          <div>
+            <button name="Nature" class="skill" data-stage="0"></button>
+            <label for="Nature">Nature</label>
+          </div>
+          <div>
+            <button name="Perception" class="skill" data-stage="0"></button>
+            <label for="Perception">Perception</label>
+          </div>
+          <div>
+            <button name="Performance" class="skill" data-stage="0"></button>
+            <label for="Performance">Performance</label>
+          </div>
+          <div>
+            <button name="Persuasion" class="skill" data-stage="0"></button>
+            <label for="Persuasion">Persuasion</label>
+          </div>
+          <div>
+            <button name="Religion" class="skill" data-stage="0"></button>
+            <label for="Religion">Religion</label>
+          </div>
+          <div>
+            <button name="Sleight of Hand" class="skill" data-stage="0"></button>
+            <label for="Sleight of Hand">Sleight of Hand</label>
+          </div>
+          <div>
+            <button name="Stealth" class="skill" data-stage="0"></button>
+            <label for="Stealth">Stealth</label>
+          </div>
+          <div>
+            <button name="Survival" class="skill" data-stage="0"></button>
+            <label for="Survival">Survival</label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <script src="js/sheet_creator.js"></script>
+  </body>
+</html>

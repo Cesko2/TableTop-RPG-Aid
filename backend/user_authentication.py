@@ -15,7 +15,7 @@ def authenticate_user(username, password):
     # Validates password
     password_is_valid = bcrypt.checkpw(
         password.encode("utf-8"),
-        user["password_hash"].encode("utf-8")
+        user["password_hash"]
     )
 
     # Return unsuccessfully
